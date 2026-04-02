@@ -140,17 +140,16 @@ function CreateProperty() {
           />
 
           <input
-            type="text"
-            placeholder="Ссылка на фото"
-            value={image}
-            onChange={(e) => setImage(e.target.value)}
-          />
-
-          <input
           type="file"
           accept="image/*"
-          onChange={(e) => handleImageUpload(e)}
+          onChange={handleImageUpload}
         />
+        <input
+        type="text"
+        placeholder="Адрес"
+        value={address}
+        onChange={(e) => setAddress(e.target.value)}
+      />
 
           <textarea
             placeholder="Описание"
